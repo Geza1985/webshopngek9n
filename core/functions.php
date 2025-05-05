@@ -1,15 +1,10 @@
 <?php
 function getDB() {
-    try {
-        return new PDO(
-            'mysql:host=localhost;dbname=pcparts;charset=utf8',
-            'root', // felhasználónév
-            '',     // jelszó (alapértelmezés szerint üres XAMPP-ben)
-            [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        );
-    } catch (PDOException $e) {
-        die("Adatbázis kapcsolat hiba: " . $e->getMessage());
-    }
+    return new PDO(
+        'mysql:host=sql102.infinityfree.com;dbname=if0_38900826_pcparts;charset=utf8',
+        'if0_38900826',
+        'uqCnPTEzuDqei',
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
 }
+
